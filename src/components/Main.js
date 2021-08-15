@@ -16,4 +16,4 @@ import HornedBeasts from './hornedBeasts'
     }
 }
 
-export default Main  
+export default Main   
