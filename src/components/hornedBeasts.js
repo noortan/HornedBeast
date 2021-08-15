@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
+import React, { Component } from 'react';
+
+
 
 
  class hornedBeasts extends Component {
