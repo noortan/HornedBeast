@@ -9,6 +9,7 @@ class HornedBeasts extends React.Component {
     this.state = {
       numberOfChoicen: 0
     }
+
   }
 
   increaseOfchoice = () => {
