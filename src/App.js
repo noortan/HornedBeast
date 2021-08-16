@@ -3,7 +3,7 @@ import Header from './components/Header' ;
 import Main from './components/Main' ;
 import Footer from './components/Footer' ;
 import './App.css' ;
-import 'bootsrap/dist/css/bootsrap.min.css'
+//import 'bootsrap/dist/css/bootsrap.min.css'
 
  class App extends Component {
   render() {
