@@ -1,19 +1,55 @@
-  
-import React, { Component } from 'react'
+import React from 'react'
 import Header from './components/Header'
-import Main from './components/Main'
 import Footer from './components/Footer'
+import Main from './components/Main'
+import Data from './components/Data.json'
+import SelectedBeast from './components/SelectedBeast'
 
- class App extends Component {
-  render() {
-    return (
-      <div>
-        <Header/>
-        <Main/>
-        <Footer/>
-      </div>
-    )
-  }
+import './App.css';
+
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showModal: false,
+            elemntSelect: {}
+        }
+
+
+    }
+
+    showModalData = (title) => {
+        let listSelect = Data.find(element => {
+            if (element.title === title) {
+                return element;
+            }
+        })
+
+        this.setState({
+            showModal: true,
+            elemntSelect:listSelect
+        })
+    }
+
+    handleClose = () => {
+
+        this.setState({
+            showModal: false,
+            elemntSelect: {}
+            
+        })
+    }
+    render() {
+        return (
+            <div>
+                <Header />
+                <Main modeldata={this.showModalData} dataselected={this.state.elemntSelect} />
+                <SelectedBeast dataselected={this.state.elemntSelect} handleClose={this.handleClose} showModal={this.state.showModal} />
+                <Footer />
+            </div>
+        )
+
+    }
 }
-
-export default App
+export default App;
